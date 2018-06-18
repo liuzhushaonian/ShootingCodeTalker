@@ -54,11 +54,10 @@ public class DownloadActivity extends BaseActivity<IDownloadActivity,DownloadPre
         if (data==null||data.isEmpty()){
             textView.setVisibility(View.VISIBLE);
 
-            Log.d("sdxs------>>","没找到下载文件");
         }else {
             textView.setVisibility(View.GONE);
             adapter.setFileList(data);
-            Log.d("sdxs------>>","找到下载文件");
+
         }
     }
 

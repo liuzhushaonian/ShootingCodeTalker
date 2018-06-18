@@ -57,7 +57,7 @@ public class MainPresenter extends BasePresenter<IMainActivity>{
         String versionName="";
 
         try {
-            // ---get the package info---
+
             PackageManager pm = activity.getPackageManager();
             PackageInfo pi = pm.getPackageInfo(activity.getPackageName(), 0);
 

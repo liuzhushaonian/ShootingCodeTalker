@@ -98,8 +98,6 @@ public class HtmlPagerUtil {
 
                 String path = sharedPreferences.getString(Conf.DOWNLOAD_PATH_NAME, Conf.DEFAULT_DOWNLOAD_PATH);
 
-
-
                 String format=url.substring(url.lastIndexOf("."),url.length());
 
                 if (title.contains(".")){//如果title已经有格式，则将格式去掉
@@ -110,10 +108,8 @@ public class HtmlPagerUtil {
 
                 }
 
-
                 File file = new File(PATH+path + title+format);
 
-                Log.d("file------>>>",file.getName());
 
                 if (!file.getParentFile().exists()) {
                     file.getParentFile().mkdirs();

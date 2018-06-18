@@ -384,10 +384,6 @@ public class SearchResultPresenter extends BasePresenter<ISearchResultActivity> 
 
             count=count.substring(count.lastIndexOf("/")+1,count.length());
 
-            Log.d("count----->>",count);
-
-
-
             getMoreResult(Integer.parseInt(count),keyword,pager);
 
 

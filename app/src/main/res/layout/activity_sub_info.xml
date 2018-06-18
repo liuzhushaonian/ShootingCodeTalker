@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.SubInfoActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/info_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        >
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/colorMi"
+            >
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/info_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/half_margin"
+                android:layout_marginStart="@dimen/half_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:orientation="vertical"
+                android:transitionName="@string/card_trans"
+                app:cardCornerRadius="@dimen/card_radius"
+                android:foreground="?attr/selectableItemBackground"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingTop="@dimen/half_margin"
+                        android:paddingBottom="@dimen/half_margin"
+                        >
+
+
+
+                        <TextView
+                            android:id="@+id/info_title"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:paddingEnd="@dimen/half_margin"
+                            android:paddingStart="@dimen/half_margin"
+                            android:text="@string/card_title"
+                            android:textSize="@dimen/card_title_text_size"
+                            android:paddingTop="@dimen/half_margin"
+                            />
+
+                        <android.support.design.widget.FloatingActionButton
+                            android:id="@+id/info_download"
+                            android:layout_width="@dimen/default_press"
+                            android:layout_height="@dimen/default_press"
+                            android:layout_marginEnd="@dimen/default_margin"
+                            android:scaleType="center"
+                            android:src="@drawable/download" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        >
+
+                        <ImageView
+                            android:id="@+id/info_like"
+                            android:layout_width="@dimen/default_press"
+                            android:layout_height="@dimen/default_press"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="@string/like"
+                            android:scaleType="center"
+                            android:src="@drawable/ic_favorite_border_black_24dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/info_format"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/file_format" />
+
+                        <TextView
+                            android:id="@+id/info_language"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/language"
+
+                            />
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/colorWhite"
+                android:layout_marginTop="@dimen/default_margin"
+                >
+
+                <TextView
+                    android:id="@+id/infos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:paddingBottom="@dimen/half_margin"
+                    android:paddingEnd="@dimen/half_margin"
+                    android:paddingStart="@dimen/default_padding"
+                    android:paddingTop="@dimen/half_margin"
+                    android:text="@string/infos" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/info_file_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/half_margin"
+                    android:layoutAnimation="@anim/layout_animation_fall"
+                    >
+
+
+                </android.support.v7.widget.RecyclerView>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

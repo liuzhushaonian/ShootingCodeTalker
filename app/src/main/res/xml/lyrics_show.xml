@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item id="0" song="清歌流觞">谁在静看 \\n燕子啄小窗</item>
+    <item id="1" song="清歌流觞">当时你曾青衫红裙抛彩绣</item>
+    <item id="2" song="清歌流觞">当时你曾月下窗前刺锦绣</item>
+    <item id="3" song="清歌流觞">当时不再 \\n白了少年头</item>
+    <item id="4" song="清歌流觞">曲悠扬 \\n词已忘 \\n桥下人相望</item>
+    <item id="6" song="泸沽寻梦">白裙红衣的姑娘桥上婀娜</item>
+    <item id="7" song="泸沽寻梦">临别时刻 \\n蓦然回首 \\n忽而相遇惊心动魄</item>
+    <item id="8" song="泸沽寻梦">邂逅过的 \\n梦醒之余 \\n却忘了该如何洒脱</item>
+    <item id="9" song="泸沽寻梦">世上原有 \\n许多因果 \\n都来不及一一道破</item>
+    <item id="10" song="牵丝戏">没了心如何相配</item>
+    <item id="11" song="牵丝戏">没了心才好相配</item>
+    <item id="12" song="牵丝戏">唱别久悲不成悲 \\n十分红处竟成灰</item>
+    <item id="14" song="牵丝戏">灯火葳蕤 \\n揉皱你眼眉</item>
+    <item id="15" song="牵丝戏">假如你舍一滴泪 \\n假如老去我能陪</item>
+    <item id="16" song="牵丝戏">我和你 \\n最天生一对</item>
+    <item id="17" song="牵丝戏">用什么 \\n暖你一千岁</item>
+    <item id="18" song="风华燃尽-指间沙">我曾傲视群雄 \\n也挥刀划破过苍穹</item>
+    <item id="19" song="风华燃尽-指间沙">曾经豪情疏狂</item>
+    <item id="20" song="风华燃尽-指间沙">还在灵魂深处飘荡</item>
+    <item id="21" song="风华燃尽-指间沙">一抔黄土将恩怨埋葬</item>
+    <item id="22" song="风华燃尽-指间沙">指间的沙飞扬 \\n像你离别匆忙</item>
+    <item id="23" song="庐州月">庐州月光 \\n洒在心上 \\n月下的你不复当年模样</item>
+    <item id="24" song="庐州月">庐州月光 \\n梨花雨凉 \\n如今的你又在谁的身旁</item>
+    <item id="25" song="庐州月">不知心上的你是否还在庐阳</item>
+    <item id="26" song="庐州月">一缕青丝一生珍藏</item>
+    <item id="27" song="庐州月">太多的伤 \\n难诉衷肠 \\n叹一句当时只道是寻常</item>
+    <item id="28" song="北京巷弄">在你最爱的巷弄 \\n我牵着你的笑容</item>
+    <item id="29" song="北京巷弄">你给的吻我却还不懂</item>
+    <item id="30" song="北京巷弄">那时候时光悠悠夕阳重重</item>
+    <item id="31" song="白金迪斯科">变幻莫测的东西 \\n亘古不变的东西 \\n变化无常的我</item>
+    <item id="32" song="白金迪斯科">虽然渺小而简单 \\n却又无可替代</item>
+    <item id="33" song="白金迪斯科">用初次相识 \\n与你定下这份永恒的誓约</item>
+    <item id="34" song="白金迪斯科">为什么这样迪斯科呢</item>
+    <item id="35" song="无归">乱世辉煌 \\n生死两茫茫</item>
+    <item id="36" song="无归">不知何时是归期</item>
+    <item id="37" song="锦鲤抄">原来诀别是因为深藏眷恋</item>
+    <item id="38" song="锦鲤抄">如果来生太远寄不到诺言
+        \\n不如学着放下许多执念</item>
+    <item id="39" song="梦与叶樱">苏醒遗忘过的记忆 \\n泪水盈眶</item>
+    <item id="40" song="over the clouds">You can get it over
+        \\n over the clouds</item>
+    <item id="41" song="落花情">一种相思花自飘零水自流
+        \\n两处闲愁独自寂寞上心头</item>
+    <item id="42" song="落花情">叹息儿女情又如何 \n千里万里朝你奔走</item>
+    <item id="43" song="落花情">梦回青青池畔回忆灯火阑珊
+        \\n一杯苦酒恰似落花情几时休</item>
+    <item id="44" song="落花情">敢问苍天明月谁知佳人等了几个秋</item>
+    <item id="45" song="落花情">花开花落只恨年少轻狂与天竞自由</item>
+    <item id="46" song="落花情">多少泪痕滑落轻抚寂寞功名欲追求</item>
+    <item id="47" song="落花情">唯有叹息落花追梦追自由</item>
+    <item id="48" song="rain">不动声色 无以言表
+        \\n不动声色 无以言表
+        \\n所有的冲动都化作
+        \\n这雨夜鲁莽的拥抱
+    </item>
+    <item id="49" song="rain">我要趁现在抓住你 \\n不要离开不要离开这样对你说</item>
+    <item id="50" song="rain">Lady 你被雨打湿
+        \\n略微凝视我双眼
+        \\n不顾大雨滂沱
+        \\n不顾浑身湿透
+    </item>
+    <item id="51" song="棠梨煎雪">依旧是
+        \\n偏爱枕惊鸿二字入梦的时节
+        \\n烛火惺忪却可与她漫聊彻夜</item>
+    <item id="52" song="棠梨煎雪">自总角至你我某日辗转天边</item>
+    <item id="53" song="棠梨煎雪">雨中灯市欲眠 原已萧萧数年
+        \\n似有故人轻叩 再将棠梨煎雪</item>
+    <item id="54" song="棠梨煎雪">天淡天青 宿雨沾襟
+        \\n一年一会信笺却只见寥寥数言</item>
+    <item id="55" song="胧月">朦胧春月下 思念随风飞散</item>
+    <item id="56" song="胧月">未再爱上其他任何人
+        \\n任岁月流逝如是</item>
+    <item id="57" song="胧月">梦终于醒来 双目沐浴于光芒中 \\n泪如花舞 悄然落下</item>
+    <item id="58" song="故人叹">故人发已衰白 \\n风尘覆盖 \\n不奢求重来</item>
+    <item id="59" song="恋梦">怒放须臾芳华的恋梦
+        \\n你只是朦胧渐逝的幻影吗
+        \\n对你的无果慕情如今依旧
+        \\n揪痛我心</item>
+    <item id="60" song="琼花房">这竹堂 曾有个二八姑娘
+        \\n善酿百酒最是琼花房</item>
+    <item id="61" song="琼花房">他拎酒一壶 撑一竿风凉
+        \\n回眸间撞进她心上</item>
+    <item id="62" song="琼花房">时光却晃啊晃啊 晃远了醇香
+        \\n她没等到心底的那个人 来尝上一尝</item>
+    <item id="63" song="逆転Winner">要攻就要攻出气势
+        \\n现在逃避将来肯定后悔</item>
+    <item id="64" song="启程">就在启程的时刻
+        \\n让我为你唱首歌
+        \\n不知以后你能否再见到我</item>
+    <item id="65" song="约束之绊">奇迹并非偶然 \\n而是努力的结晶</item>
+    <item id="66" song="约束之绊">不要忘记笑容 \\无论多么辛苦的道路</item>
+    <item id="67" song="约束之绊">并没有徒劳无用之事 \\n请看向前方欢笑喔</item>
+    <item id="68" song="约束之绊">奇迹并非偶然 \n而是努力的结晶</item>
+    <item id="69" song="白雪 ～sirayuki～">淡淡地 \\n渐逝的 \\n我的爱恋 \\n深深地 沁入心灵</item>
+    <item id="70" song="逍遥">只要心还跳 \n就有我逗你笑</item>
+    <item id="71" song="ハルノユキ （春之雪）">春之雪 \\n飘扬洒落 \\n每一片都暗藏思恋</item>
+    <item id="72" song="ハルノユキ （春之雪）">想要见你 \\n想要见你 \\n发现的时候又充满了春天的味道</item>
+    <item id="73" song="Happier">Baby, you look happier, you do，
+        \\nI know one day you'd fall for someone new
+        \\nBut if breaks your heart like lovers do
+        \\nJust know that I'll be waiting here for you</item>
+    <item id="74" song="袖手旁观">你的脸庞 闭上眼睛就在我面前转呀转，
+        \\n我拿什么条件能够把你遗忘，
+        \\n除非我们 \\n 从一开始就不曾爱过对方。</item>
+    <item id="75" song="为了告别的旅行">生活无非是人与人合合又分分，
+        \\n谁会在明天早晨敲响你的门。</item>
+    <item id="76" song="I See Fire">And I see fire burn on and on,
+        \\n我看见大火蔓延了，
+        \\nThe mountainside.
+        \\n整座孤山。</item>
+    <item id="77" song="Lego House">I'm out of touch, I'm out of love，
+        \\nI'll pick you up when you're getting down，
+        \\nAnd out of all these things I've done，
+        \\nI think I love you better now.</item>
+    <item id="78" song="成都">分别总是在九月 回忆是思念的愁
+        \\n深秋嫩绿的垂柳 亲吻着我额头
+        \\n在那座阴雨的小城里 我从未忘记你</item>
+    <item id="79" song="给的再多，不如懂我">你懂我就够了</item>
+    <item id="80" song="原谅">毕竟是我爱的人，我能够怪你什么。</item>
+    <item id="81" song="Million Reasons">Can't you give me what I'm needin', needin'.
+        \\n你能了却我的所求所需吗</item>
+    <item id="82" song="成都">在那座阴雨的小城里 \\n我从未忘记你。</item>
+    <item id="83" song="告白气球">拥有你就拥有全世界。</item>
+    <item id="84" song="阿楚姑娘">请你带走我的惆怅吧
+        \\n别让我追随不可遗弃的彷徨</item>
+    <item id="85" song="曾经的你">走在勇往直前的路上。</item>
+    <item id="86" song="白羊">多热烈的白羊
+        \\n热烈得好抽象
+        \\n抽象掩盖欲望
+        \\n却又欲盖弥彰 </item>
+    <item id="87" song="听见下雨的声音">发现你始终很靠近
+        \\n默默的陪在我身边</item>
+    <item id="88" song="回想">有生之年 \\n得以遇见。</item>
+    <item id="89" song="Love∞Destiny">you're my destiny
+        \\n wanna be your everything
+        \\n don't stop my pure love
+        \\n wanna be your only love
+    </item>
+
+
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.app.legend.shootingcodetalker.utils.RippleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/color_bg"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        android:background="@color/colorTeal"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:background="@color/colorTransparent"
+            android:id="@+id/color_toolbar"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            >
+
+
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/color_list"
+            android:background="@color/colorWhite"
+            >
+
+
+        </android.support.v7.widget.RecyclerView>
+
+    </com.app.legend.shootingcodetalker.utils.RippleView>
+
+
+</LinearLayout>

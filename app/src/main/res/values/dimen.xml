@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="diary_text_size">16sp</dimen>
+    <dimen name="image_Instructions_text_size">12sp</dimen>
+    <dimen name="diary_padding">16dp</dimen>
+    <dimen name="default_margin">16dp</dimen>
+    <dimen name="default_padding">16dp</dimen>
+
+    <dimen name="default_press">48dp</dimen>
+
+    <dimen name="half_default">24dp</dimen>
+
+    <dimen name="bottom_bar_height">60dp</dimen>
+
+    <dimen name="button_height">40dp</dimen>
+
+    <dimen name="tri_width">16dp</dimen>
+
+    <dimen name="tri_height">40dp</dimen>
+
+    <dimen name="half_margin">8dp</dimen>
+
+    <dimen name="album_item_space">2dp</dimen>
+
+    <dimen name="folder_item_height">72dp</dimen>
+
+    <dimen name="folder_preview_height">60dp</dimen>
+
+    <dimen name="search_radius">5dp</dimen>
+
+    <dimen name="card_radius">5dp</dimen>
+
+    <dimen name="card_view_height">128dp</dimen>
+
+    <dimen name="card_title_text_size">16sp</dimen>
+
+    <dimen name="card_linear_layout_margin_end">80dp</dimen>
+
+    <dimen name="item_space">4dp</dimen>
+
+    <dimen name="file_item_height">80dp</dimen>
+
+    <dimen name="bottom_play_bar">48dp</dimen>
+    <dimen name="default_space">16dp</dimen>
+    <dimen name="press_space">48dp</dimen>
+    <dimen name="z_height">5dp</dimen>
+    <dimen name="music_list_space">72dp</dimen>
+    <dimen name="av_space">12dp</dimen>
+    <dimen name="playing_bar_progress">32dp</dimen>
+    <dimen name="progress_bar_margin">8dp</dimen>
+    <dimen name="playing_bar_text_size">16sp</dimen>
+    <dimen name="other_text_size">14sp</dimen>
+    <dimen name="album_space">36dp</dimen>
+    <dimen name="album_padding">32dp</dimen>
+    <dimen name="album_top">2dp</dimen>
+    <dimen name="album_bottom">2dp</dimen>
+    <dimen name="album_other">4dp</dimen>
+    <dimen name="album_info_d">200dp</dimen>
+    <dimen name="album_info_w">100dp</dimen>
+    <dimen name="text_size">20sp</dimen>
+    <dimen name="controller_padding">5dp</dimen>
+
+    <dimen name="play_button">72dp</dimen>
+
+    <dimen name="controller_margin">10dp</dimen>
+
+    <dimen name="bottom_padding">8dp</dimen>
+
+    <dimen name="bottom_dialog_radius">5dp</dimen>
+
+    <dimen name="notification_padding">8dp</dimen>
+
+    <dimen name="notification_big_book">100dp</dimen>
+
+    <dimen name="lrc_text_size">14sp</dimen>
+
+    <dimen name="stroke">1dp</dimen>
+
+</resources>

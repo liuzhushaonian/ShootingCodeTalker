@@ -1,0 +1,87 @@
+<resources>
+    <string name="app_name">ShootingCodeTalker</string>
+
+    <string name="search">搜索字幕</string>
+
+    <string name="card_title"> </string>
+
+    <string name="file_format">格式:SSA</string>
+
+    <string name="language">语言:简</string>
+
+    <string name="like">收藏</string>
+
+    <string name="change_color">换肤</string>
+
+    <string name="others">其他</string>
+
+    <string name="setting">设置</string>
+
+    <string name="about_developer">关于开发者</string>
+    <string name="about_app">关于</string>
+
+    <string name="exit">退出</string>
+
+    <string name="infos">文件列表(点击预览)</string>
+
+    <string name="card_trans">cards_trans</string>
+
+    <string name="download">下载</string>
+
+    <string name="edit_view">编辑区域</string>
+
+    <string name="no_network">啊咧，召唤失败了！\n
+
+        请查看网络是否连接\n
+
+        点击重新搜索</string>
+
+    <string name="load_info">ShootingCodeTalker召唤中……</string>
+
+    <string name="alert_title">警告</string>
+
+    <string name="alert_message">当前正在使用移动数据，将消耗大量流量，是否继续?</string>
+
+    <string name="yes">继续</string>
+
+    <string name="no">取消</string>
+
+    <string name="pre_local_title">文件下载地址(仅在sdcard下，格式：/xxx/)</string>
+
+    <string name="pre_local_sub">/Shooting/sub/</string>
+
+    <string name="pre_net_status">仅WiFi环境可搜索与下载</string>
+
+    <string name="pre_net_sub">如果非WiFi环境，可能会导致使用大量流量</string>
+
+    <string name="pre_download_setting">下载设置</string>
+
+    <string name="pre_search_setting">搜索设置</string>
+
+    <string name="pre_search_item_count">搜索显示数量(默认15，上限100，以实际结果为准)</string>
+
+    <string name="pre_search_item_sub">15</string>
+
+    <string name="no_download_info">这里……空空的</string>
+
+    <string name="no_result">ε=(´ο｀*)))唉，居然没搜到任何字幕，换一下搜索关键字吧</string>
+
+    <string name="about_content">
+        本APP是大三实习作品，仅提供学习交流，不作为也不允许任何商业用途。\n
+
+        \n
+
+        本APP基于爬虫，数据源是射手网(伪)。\n
+
+        \n
+
+        本人并不提供任何数据来源，任何能搜索到的字幕均来自第三方。\n
+        \n
+
+        开源地址：https://github.com/liuzhushaonian/ShootingCodeTalker \n
+
+        \n
+
+    </string>
+
+</resources>

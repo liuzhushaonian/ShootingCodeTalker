@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="深邃蓝" id="1">#5677fc</color>
+    <color name="奥林橘" id="2">#ff9800</color>
+    <color name="格调灰" id="3">#9e9e9e</color>
+    <color name="天空蓝" id="4">#03A9F4</color>
+    <color name="狗熊棕" id="5">#795548</color>
+    <color name="高调灰" id="6">#607d8b</color>
+    <color name="少女粉" id="7">#e91e63</color>
+    <color name="基佬紫" id="8">#9c27b0</color>
+    <color name="中国红" id="9">#e51c23</color>
+    <color name="少一靛" id="10">#00bcd4</color>
+    <color name="原力青" id="11">#009688</color>
+    <color name="帽子绿" id="12">#259b24</color>
+    <color name="活力黄" id="13">#ffeb3b</color>
+
+
+
+</resources>

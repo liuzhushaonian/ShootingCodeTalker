@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/music_list_space"
+    android:paddingStart="@dimen/default_space"
+    android:paddingEnd="@dimen/default_space"
+    android:foreground="?attr/selectableItemBackground"
+    android:clickable="true"
+    >
+
+    <com.app.legend.shootingcodetalker.utils.CircleView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:id="@+id/color_view"
+        android:layout_centerVertical="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/color_name"
+        android:maxLines="1"
+        android:layout_toEndOf="@+id/color_view"
+        android:layout_centerVertical="true"
+        android:paddingStart="@dimen/default_space"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:textColor="@color/colorGrey"
+        android:id="@+id/color_info"
+        android:visibility="gone"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorGrey"
+        />
+
+
+</RelativeLayout>

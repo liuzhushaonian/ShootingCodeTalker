@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/pre_download_setting"
+        >
+
+        <EditTextPreference
+            android:title="@string/pre_local_title"
+            android:summary="@string/pre_local_sub"
+            android:key="local"
+            android:defaultValue="@string/pre_local_sub"
+            />
+
+        <SwitchPreference
+            android:title="@string/pre_net_status"
+            android:summary="@string/pre_net_sub"
+            android:defaultValue="true"
+            android:key="switch_net"
+            />
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/pre_search_setting"
+        >
+
+        <EditTextPreference
+            android:title="@string/pre_search_item_count"
+            android:summary="@string/pre_search_item_sub"
+            android:key="search_count"
+            android:defaultValue="15"
+            android:inputType="number"
+            />
+
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

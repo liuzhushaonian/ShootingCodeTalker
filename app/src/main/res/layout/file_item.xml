@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/file_item_height"
+    android:gravity="center"
+    android:foreground="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    >
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingStart="@dimen/default_padding"
+        android:paddingEnd="@dimen/default_padding"
+        android:maxLines="2"
+        android:ellipsize="middle"
+        android:id="@+id/file_title"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:id="@+id/file_size"
+        />
+
+    <ImageView
+        android:layout_width="@dimen/default_press"
+        android:layout_height="@dimen/default_press"
+        android:contentDescription="@string/download"
+        android:src="@drawable/download"
+        android:scaleType="center"
+        android:layout_marginEnd="@dimen/half_margin"
+        android:tint="@color/colorPink"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:id="@+id/file_download"
+        />
+
+
+</LinearLayout>

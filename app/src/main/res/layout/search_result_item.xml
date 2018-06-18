@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/card_view_height"
+    app:cardCornerRadius="@dimen/card_radius"
+    android:foreground="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:transitionName="@string/card_trans"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            >
+
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/item_title"
+                android:maxLines="3"
+                android:textSize="@dimen/card_title_text_size"
+                android:paddingEnd="@dimen/half_margin"
+                android:text="@string/card_title"
+                android:paddingStart="@dimen/half_margin"
+                android:ellipsize="marquee"
+                />
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="@dimen/default_press"
+                android:layout_height="@dimen/default_press"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:src="@drawable/download"
+                android:scaleType="center"
+                android:id="@+id/item_download"
+                />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/default_press"
+                android:layout_height="@dimen/default_press"
+                android:contentDescription="@string/like"
+                android:src="@drawable/ic_favorite_border_black_24dp"
+                android:scaleType="center"
+                android:id="@+id/like"
+                android:background="?attr/selectableItemBackgroundBorderless"
+
+                />
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/file_format"
+                android:text="@string/file_format"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/language"
+                android:text="@string/language"
+                android:gravity="center"
+                />
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+</android.support.v7.widget.CardView>

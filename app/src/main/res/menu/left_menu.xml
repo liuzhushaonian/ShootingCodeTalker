@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+
+        <item
+            android:id="@+id/change_color"
+            android:title="@string/change_color"
+            android:icon="@drawable/ic_palette_black_24dp"
+            />
+
+        <item
+            android:title="@string/like"
+            android:id="@+id/menu_like"
+            android:icon="@drawable/ic_favorite_black_24dp"
+            />
+
+        <item
+            android:title="@string/download"
+            android:icon="@drawable/ic_arrow_downward_black_24dp"
+            android:id="@+id/download_file"
+            />
+
+        <item
+            android:id="@+id/setting"
+            android:title="@string/setting"
+            android:icon="@drawable/ic_settings_black_24dp"
+            />
+
+
+    </group>
+
+
+    <item
+        android:title="@string/others"
+        >
+        <menu>
+
+            <item android:id="@+id/about_app"
+                android:title="@string/about_app"
+                android:icon="@drawable/ic_phone_android_black_24dp"
+                />
+
+            <item
+                android:id="@+id/exit"
+                android:title="@string/exit"
+                android:icon="@drawable/ic_exit_to_app_black_24dp"
+                />
+
+        </menu>
+
+
+    </item>
+
+</menu>

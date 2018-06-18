@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SearchResultActivity"
+    android:orientation="vertical"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:id="@+id/result_toolbar"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:background="@color/colorTeal"
+        app:navigationIcon="@drawable/ic_menu_black_24dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:paddingEnd="@dimen/default_padding"
+            android:paddingStart="0dp"
+            android:transitionName="@string/search"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/default_press"
+                android:layout_height="@dimen/default_press"
+                android:src="@drawable/ic_search_black_24dp"
+                android:contentDescription="@string/search"
+                android:scaleType="center"
+                android:layout_gravity="center"
+                android:tint="@color/colorWhite"
+
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/search"
+                android:inputType="text"
+                android:background="@null"
+                android:layout_gravity="center"
+                android:imeOptions="actionSearch"
+                android:id="@+id/search_edit_s"
+                android:transitionName="@string/search"
+                />
+
+
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/result_list"
+            android:paddingStart="@dimen/half_margin"
+            android:paddingEnd="@dimen/half_margin"
+            android:background="@color/colorMi"
+            android:layoutAnimation="@anim/layout_animation_fall_down"
+            >
+
+
+        </android.support.v7.widget.RecyclerView>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/default_press"
+            android:id="@+id/load_info"
+            >
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/infos"
+                android:src="@drawable/load_anim"
+                android:id="@+id/anim_load"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/load_info"
+                android:padding="@dimen/default_padding"
+                android:id="@+id/load_text"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+
+
+
+    </FrameLayout>
+
+
+
+
+
+
+</LinearLayout>

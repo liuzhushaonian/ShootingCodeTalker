@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ShootingCodeTalker</string>
+    <string name="app_name">射码语者</string>
 
     <string name="search">搜索字幕</string>
 
@@ -22,7 +22,7 @@
 
     <string name="exit">退出</string>
 
-    <string name="infos">文件列表(点击预览)</string>
+    <string name="infos">文件列表</string>
 
     <string name="card_trans">cards_trans</string>
 

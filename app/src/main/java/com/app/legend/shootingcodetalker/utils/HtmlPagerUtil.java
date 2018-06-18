@@ -50,8 +50,6 @@ public class HtmlPagerUtil {
             pager="";
         }
 
-        Log.d("pager---->>>",pager);
-
         return pager;
     }
 
@@ -100,7 +98,22 @@ public class HtmlPagerUtil {
 
                 String path = sharedPreferences.getString(Conf.DOWNLOAD_PATH_NAME, Conf.DEFAULT_DOWNLOAD_PATH);
 
-                File file = new File(PATH+path + title);
+
+
+                String format=url.substring(url.lastIndexOf("."),url.length());
+
+                if (title.contains(".")){//如果title已经有格式，则将格式去掉
+
+                    String s1=title.substring(title.lastIndexOf("."),title.length());
+
+                    title=title.replace(s1,"");
+
+                }
+
+
+                File file = new File(PATH+path + title+format);
+
+                Log.d("file------>>>",file.getName());
 
                 if (!file.getParentFile().exists()) {
                     file.getParentFile().mkdirs();

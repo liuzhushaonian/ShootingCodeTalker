@@ -6,6 +6,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.ColorStateList;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -30,6 +32,9 @@ import com.app.legend.shootingcodetalker.R;
 import com.app.legend.shootingcodetalker.interfaces.IMainActivity;
 import com.app.legend.shootingcodetalker.presenter.BasePresenter;
 import com.app.legend.shootingcodetalker.presenter.MainPresenter;
+import com.app.legend.shootingcodetalker.utils.Conf;
+
+import java.io.File;
 
 public class MainActivity extends BaseActivity<IMainActivity, MainPresenter> implements IMainActivity {
 
@@ -42,6 +47,7 @@ public class MainActivity extends BaseActivity<IMainActivity, MainPresenter> imp
     private String keyword = "";
     private ImageView searchIcon;
     private long mExitTime = 0;
+    private ImageView header;
 
     private static final String[] permissionStrings =
             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
@@ -58,6 +64,7 @@ public class MainActivity extends BaseActivity<IMainActivity, MainPresenter> imp
 
         initSearchView();
 
+        initHeader();
 
         click();
     }
@@ -91,6 +98,7 @@ public class MainActivity extends BaseActivity<IMainActivity, MainPresenter> imp
 
         navigationView = findViewById(R.id.left_menu);
         searchIcon = findViewById(R.id.search_icon);
+        this.header = navigationView.getHeaderView(0).findViewById(R.id.header_image);
     }
 
     /**
@@ -142,6 +150,23 @@ public class MainActivity extends BaseActivity<IMainActivity, MainPresenter> imp
     }
 
     /**
+     * 实例化头部图片
+     */
+    private void initHeader() {
+
+        String path = getApplicationContext().getFilesDir().getAbsolutePath();
+
+        File file = new File(path + "/" + Conf.HEADER);
+
+        if (file.exists()) {
+            Bitmap bitmap = BitmapFactory.decodeFile(file.getAbsolutePath());
+
+            this.header.setImageBitmap(bitmap);
+        }
+
+    }
+
+    /**
      * 检查一波权限
      *
      * @param content
@@ -173,7 +198,6 @@ public class MainActivity extends BaseActivity<IMainActivity, MainPresenter> imp
         navigationView.setNavigationItemSelectedListener(item -> {
 
 
-
             switch (item.getItemId()) {
 
 
@@ -199,7 +223,6 @@ public class MainActivity extends BaseActivity<IMainActivity, MainPresenter> imp
                     showAbout();
 
 
-
                     break;
 
                 case R.id.download_file:
@@ -218,8 +241,6 @@ public class MainActivity extends BaseActivity<IMainActivity, MainPresenter> imp
             }
 
             drawerLayout.closeDrawer(GravityCompat.START);
-
-
 
 
             return true;
@@ -255,6 +276,84 @@ public class MainActivity extends BaseActivity<IMainActivity, MainPresenter> imp
             }
         });
 
+
+        this.header.setOnClickListener(v -> {
+
+
+            checkForOpenFile();
+
+        });
+
+        this.header.setOnLongClickListener(v -> {
+
+            this.header.setImageResource(R.drawable.bg);
+
+            Toast.makeText(this, "已恢复默认图~", Toast.LENGTH_SHORT).show();
+
+            return true;
+        });
+
+    }
+
+    /**
+     * 打开相册权限
+     */
+    private void checkForOpenFile() {
+
+        if (ContextCompat.checkSelfPermission(MainActivity.this, permissionStrings[0]) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{permissionStrings[0]}, 601);
+
+        } else {
+            openAlbum();
+        }
+
+
+    }
+
+
+    /**
+     * 打开相册
+     */
+    private void openAlbum() {
+
+
+        Intent intent = new Intent("android.intent.action.GET_CONTENT");
+        intent.setType("image/*");
+        startActivityForResult(intent, 201);
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        switch (requestCode) {
+            case 201://获取图片
+
+                if (data == null) {
+                    return;
+                }
+
+                startCropImage(data.getData(), this.header.getWidth(), this.header.getHeight(), 301);
+
+                break;
+            case 301://剪切图片
+
+                if (data == null) {
+                    return;
+                }
+
+                presenter.saveAndSetImage(data.getData(), this.header);
+
+                break;
+
+            default:
+
+                super.onActivityResult(requestCode, resultCode, data);
+
+                break;
+        }
+
+
     }
 
     /**
@@ -266,8 +365,6 @@ public class MainActivity extends BaseActivity<IMainActivity, MainPresenter> imp
             ActivityCompat.requestPermissions(this, new String[]{permissionStrings[0]}, 1000);
 
         } else {
-
-
             openSearch(content);//已经拥有权限，则进行搜索
 
         }
@@ -285,7 +382,7 @@ public class MainActivity extends BaseActivity<IMainActivity, MainPresenter> imp
                     if (!this.keyword.isEmpty()) {
 
 
-                        new Thread(){
+                        new Thread() {
 
                             @Override
                             public void run() {
@@ -294,7 +391,7 @@ public class MainActivity extends BaseActivity<IMainActivity, MainPresenter> imp
                                 try {
                                     sleep(100);
 
-                                    runOnUiThread(()->{
+                                    runOnUiThread(() -> {
                                         openSearch(keyword);
                                     });
 
@@ -312,6 +409,18 @@ public class MainActivity extends BaseActivity<IMainActivity, MainPresenter> imp
                     Toast.makeText(this, "无法获取权限，请赋予相关权限", Toast.LENGTH_SHORT).show();
                 }
 
+
+                break;
+
+            case 601://打开相册权限
+
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    openAlbum();
+
+                } else {
+
+                    Toast.makeText(this, "无法获取权限，请赋予相关权限", Toast.LENGTH_SHORT).show();
+                }
 
                 break;
         }
@@ -372,7 +481,7 @@ public class MainActivity extends BaseActivity<IMainActivity, MainPresenter> imp
     /**
      * 关闭APP
      */
-    private void exitApp(){
+    private void exitApp() {
 
         finish();
 
@@ -382,29 +491,29 @@ public class MainActivity extends BaseActivity<IMainActivity, MainPresenter> imp
     /**
      * 打开设置界面
      */
-    private void openPreference(){
+    private void openPreference() {
 
-        Intent intent=new Intent(MainActivity.this,PreferencesActivity.class);
+        Intent intent = new Intent(MainActivity.this, PreferencesActivity.class);
 
         startActivity(intent);
 
     }
 
-    private void openDownload(){
+    private void openDownload() {
 
-        Intent intent=new Intent(MainActivity.this,DownloadActivity.class);
-
-        startActivity(intent);
-    }
-
-    private void openLike(){
-
-        Intent intent=new Intent(MainActivity.this,LikeActivity.class);
+        Intent intent = new Intent(MainActivity.this, DownloadActivity.class);
 
         startActivity(intent);
     }
 
-    private void showAbout(){
+    private void openLike() {
+
+        Intent intent = new Intent(MainActivity.this, LikeActivity.class);
+
+        startActivity(intent);
+    }
+
+    private void showAbout() {
 
         presenter.showAbout(this);
 

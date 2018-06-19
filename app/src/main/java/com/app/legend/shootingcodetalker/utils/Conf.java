@@ -17,5 +17,6 @@ public class Conf {
 
     public static final String SHARE_NAME="Shooting";
 
+    public static final String HEADER="Shooting_header";
 
 }

@@ -36,6 +36,7 @@ public class LikeActivity extends BaseActivity<ILikeActivity,LikePresenter> impl
         initToolbar();
         initList();
         getData();
+        slideHelper.setSlideActivity(this);
 
     }
 

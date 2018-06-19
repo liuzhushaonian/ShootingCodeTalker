@@ -67,6 +67,7 @@ public class SubInfoActivity extends BaseActivity<ISubActivity,SubPresenter> imp
         initResult();
 
         click();
+        slideHelper.setSlideActivity(this);
 
     }
 

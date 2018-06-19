@@ -72,6 +72,8 @@ public class SearchResultActivity extends BaseActivity<ISearchResultActivity,Sea
         click();
 
 
+        slideHelper.setSlideActivity(this);
+
     }
 
     @Override

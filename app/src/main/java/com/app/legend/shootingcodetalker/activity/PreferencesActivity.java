@@ -29,6 +29,8 @@ public class PreferencesActivity extends BaseActivity<IPreferencesActivity,Prefe
         initFragment();
 
 
+        slideHelper.setSlideActivity(this);
+
     }
 
     @Override

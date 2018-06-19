@@ -14,6 +14,7 @@ public class ShootingApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        SlideHelper.setApplication(this);
         context=getApplicationContext();
     }
 }

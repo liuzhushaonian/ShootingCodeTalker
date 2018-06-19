@@ -12,6 +12,7 @@ import android.view.WindowManager;
 import com.app.legend.shootingcodetalker.R;
 import com.app.legend.shootingcodetalker.presenter.BasePresenter;
 import com.app.legend.shootingcodetalker.utils.Conf;
+import com.app.legend.shootingcodetalker.utils.SlideHelper;
 
 
 public abstract class BaseActivity<V,T extends BasePresenter<V>> extends AppCompatActivity {
@@ -20,8 +21,7 @@ public abstract class BaseActivity<V,T extends BasePresenter<V>> extends AppComp
     protected T presenter;
     protected Toolbar toolbar;
     protected SharedPreferences sharedPreferences;
-
-
+    protected SlideHelper slideHelper;
 
 
     @Override
@@ -39,6 +39,7 @@ public abstract class BaseActivity<V,T extends BasePresenter<V>> extends AppComp
         presenter=createPresenter();
         presenter.attachView((V) this);
 
+        slideHelper=SlideHelper.getInstance();
 
     }
 

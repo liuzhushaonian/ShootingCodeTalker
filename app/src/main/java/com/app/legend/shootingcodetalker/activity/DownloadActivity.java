@@ -34,6 +34,7 @@ public class DownloadActivity extends BaseActivity<IDownloadActivity,DownloadPre
         initToolbar();
         initList();
         getData();
+        slideHelper.setSlideActivity(this);
 
     }
 

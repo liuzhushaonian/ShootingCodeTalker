@@ -121,7 +121,6 @@ public class SearchResultPresenter extends BasePresenter<ISearchResultActivity> 
                 .create((ObservableOnSubscribe<Result>) e -> {
 
 
-
                     Document document= Jsoup.parse(pager);
 
                     Element div=document.getElementById("resultsdiv");

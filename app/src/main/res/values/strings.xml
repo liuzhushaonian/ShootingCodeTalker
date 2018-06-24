@@ -88,4 +88,15 @@
 
     </string>
 
+    <string name="hongbao">打赏</string>
+
+    <string name="hongbao_content">没错这是个伪打赏\n\n
+        这里只有一个支付宝的吱口令\n\n
+        我知道很多人不会打赏的\n\n
+        那就领个红包\n\n
+        让我喝瓶阔落吧\n\n
+        点击下方的复制吱口令\n\n
+        打开支付宝即可获得两份红包
+    </string>
+
 </resources>

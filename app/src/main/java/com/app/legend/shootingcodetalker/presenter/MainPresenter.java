@@ -1,6 +1,9 @@
 package com.app.legend.shootingcodetalker.presenter;
 
 import android.app.Activity;
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.DialogInterface;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -12,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.app.legend.shootingcodetalker.R;
 import com.app.legend.shootingcodetalker.activity.MainActivity;
@@ -30,6 +34,8 @@ import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
+
+import static android.content.Context.CLIPBOARD_SERVICE;
 
 public class MainPresenter extends BasePresenter<IMainActivity>{
 
@@ -170,6 +176,36 @@ public class MainPresenter extends BasePresenter<IMainActivity>{
             e.printStackTrace();
         }
         return bitmap;
+    }
+
+    public void showHongbao(Activity activity){
+
+        String content=activity.getResources().getString(R.string.hongbao_content);
+
+        AlertDialog.Builder builder=new AlertDialog.Builder(activity);
+
+        View view= LayoutInflater.from(activity).inflate(R.layout.about_content,null,false);
+
+        TextView textView=view.findViewById(R.id.about_content);
+
+
+        textView.setText(content);
+
+        builder.setView(view).setTitle("伪打赏").setPositiveButton("复制吱口令", (DialogInterface dialog, int which) -> {
+
+
+            ClipboardManager mClipboardManager = (ClipboardManager) activity.getSystemService(CLIPBOARD_SERVICE);
+
+            ClipData clipData = ClipData.newPlainText("1b3l4H43ke", "1b3l4H43ke");
+            if (mClipboardManager!=null) {
+                mClipboardManager.setPrimaryClip(clipData);
+
+                Toast.makeText(activity, "复制成功，打开支付宝领取红包吧，感谢老铁的支持~", Toast.LENGTH_SHORT).show();
+
+            }
+
+        }).show();
+
     }
 
 }

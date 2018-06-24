@@ -211,6 +211,8 @@ public class DatabaseUtil extends SQLiteOpenHelper {
                     String language=cursor.getString(cursor.getColumnIndex(LANGUAGE));
                     String link=cursor.getString(cursor.getColumnIndex(LINK));
 
+
+
                     Result result=new Result();
                     result.setDownload_link(download_link);
                     result.setId(id);
@@ -218,6 +220,10 @@ public class DatabaseUtil extends SQLiteOpenHelper {
                     result.setLink(link);
                     result.setTitle(title);
                     result.setFormat(format);
+
+                    if (!isFileExists(download_link)){
+                        result.setDownload(1);
+                    }
 
                     resultList.add(result);
 

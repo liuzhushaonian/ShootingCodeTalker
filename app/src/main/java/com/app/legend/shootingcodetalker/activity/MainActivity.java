@@ -26,6 +26,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.app.legend.shootingcodetalker.R;
@@ -48,6 +49,7 @@ public class MainActivity extends BaseActivity<IMainActivity, MainPresenter> imp
     private ImageView searchIcon;
     private long mExitTime = 0;
     private ImageView header;
+    private TextView hongbao;
 
     private static final String[] permissionStrings =
             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
@@ -99,6 +101,8 @@ public class MainActivity extends BaseActivity<IMainActivity, MainPresenter> imp
         navigationView = findViewById(R.id.left_menu);
         searchIcon = findViewById(R.id.search_icon);
         this.header = navigationView.getHeaderView(0).findViewById(R.id.header_image);
+
+        hongbao=findViewById(R.id.hongbao);
     }
 
     /**
@@ -291,6 +295,12 @@ public class MainActivity extends BaseActivity<IMainActivity, MainPresenter> imp
             Toast.makeText(this, "已恢复默认图~", Toast.LENGTH_SHORT).show();
 
             return true;
+        });
+
+        hongbao.setOnClickListener(v->{
+
+            presenter.showHongbao(this);
+
         });
 
     }

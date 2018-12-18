@@ -196,7 +196,7 @@ public class MainPresenter extends BasePresenter<IMainActivity>{
 
             ClipboardManager mClipboardManager = (ClipboardManager) activity.getSystemService(CLIPBOARD_SERVICE);
 
-            ClipData clipData = ClipData.newPlainText("1b3l4H43ke", "1b3l4H43ke");
+            ClipData clipData = ClipData.newPlainText("4909143", "4909143");
             if (mClipboardManager!=null) {
                 mClipboardManager.setPrimaryClip(clipData);
 

@@ -3,6 +3,9 @@ package com.app.legend.shootingcodetalker.bean;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+/**
+ * 下载文件
+ */
 public class DownloadFile implements Parcelable{
 
     private String name;

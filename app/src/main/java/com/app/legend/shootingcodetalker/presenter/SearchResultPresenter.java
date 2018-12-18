@@ -98,6 +98,8 @@ public class SearchResultPresenter extends BasePresenter<ISearchResultActivity> 
             public void run() {
                 super.run();
 
+                Log.d("url--->>>",""+url);
+
                 String pager= HtmlPagerUtil.getSearchPager(url);
 
                 parsePagerCount(pager,keyword);//解析出所有的页数

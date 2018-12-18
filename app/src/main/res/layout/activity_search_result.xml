@@ -92,8 +92,8 @@
             android:id="@+id/load_info"
             >
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:contentDescription="@string/infos"
                 android:src="@drawable/load_anim"
                 android:id="@+id/anim_load"

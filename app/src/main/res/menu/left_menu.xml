@@ -16,7 +16,7 @@
             />
 
         <item
-            android:title="@string/download"
+            android:title="@string/downloads"
             android:icon="@drawable/ic_arrow_downward_black_24dp"
             android:id="@+id/download_file"
             />

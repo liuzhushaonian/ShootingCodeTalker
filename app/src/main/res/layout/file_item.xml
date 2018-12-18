@@ -31,7 +31,7 @@
     <ImageView
         android:layout_width="@dimen/default_press"
         android:layout_height="@dimen/default_press"
-        android:contentDescription="@string/download"
+        android:contentDescription="@string/downloads"
         android:src="@drawable/download"
         android:scaleType="center"
         android:layout_marginEnd="@dimen/half_margin"

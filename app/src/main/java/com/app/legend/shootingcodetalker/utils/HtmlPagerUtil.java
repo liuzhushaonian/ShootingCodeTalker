@@ -54,6 +54,7 @@ public class HtmlPagerUtil {
     }
 
 
+    //下载文件
     public static int download(String url,String title){
 
         int result=-1;

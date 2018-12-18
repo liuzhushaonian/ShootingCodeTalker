@@ -22,11 +22,11 @@
 
     <string name="exit">退出</string>
 
-    <string name="infos">文件列表</string>
+    <string name="infos">文件列表(点击预览)</string>
 
     <string name="card_trans">cards_trans</string>
 
-    <string name="download">下载</string>
+    <string name="downloads">下载</string>
 
     <string name="edit_view">编辑区域</string>
 
@@ -96,7 +96,9 @@
         那就领个红包\n\n
         让我喝瓶阔落吧\n\n
         点击下方的复制吱口令\n\n
-        打开支付宝即可获得两份红包
     </string>
+
+    <string name="loading">加载中…</string>
+
 
 </resources>

@@ -19,6 +19,7 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -34,6 +35,7 @@ import com.app.legend.shootingcodetalker.interfaces.IMainActivity;
 import com.app.legend.shootingcodetalker.presenter.BasePresenter;
 import com.app.legend.shootingcodetalker.presenter.MainPresenter;
 import com.app.legend.shootingcodetalker.utils.Conf;
+import com.app.legend.shootingcodetalker.utils.SlideHelper;
 
 import java.io.File;
 
@@ -116,7 +118,9 @@ public class MainActivity extends BaseActivity<IMainActivity, MainPresenter> imp
 
         toolbar.setNavigationOnClickListener(v -> {
 
-            drawerLayout.openDrawer(GravityCompat.START);
+            drawerLayout.openDrawer(Gravity.START,true);
+
+
 
         });
 
@@ -474,7 +478,10 @@ public class MainActivity extends BaseActivity<IMainActivity, MainPresenter> imp
 
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-            if ((System.currentTimeMillis() - mExitTime) > 2000) {//
+
+            if (drawerLayout.isDrawerOpen(Gravity.START)){
+                drawerLayout.closeDrawers();
+            }else if ((System.currentTimeMillis() - mExitTime) > 2000) {//
                 // 如果两次按键时间间隔大于2000毫秒，则不退出
                 Toast.makeText(this, "再按一次退出程序", Toast.LENGTH_SHORT).show();
                 mExitTime = System.currentTimeMillis();// 更新mExitTime

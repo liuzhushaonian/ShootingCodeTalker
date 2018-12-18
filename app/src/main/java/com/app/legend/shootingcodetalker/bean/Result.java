@@ -5,6 +5,9 @@ import android.os.Parcelable;
 
 import java.util.List;
 
+/**
+ * 搜索结果，用于在搜索界面显示
+ */
 public class Result implements Parcelable{
 
     private String title;//文件名

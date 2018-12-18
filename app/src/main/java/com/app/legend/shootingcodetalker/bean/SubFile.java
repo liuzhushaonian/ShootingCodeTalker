@@ -3,6 +3,9 @@ package com.app.legend.shootingcodetalker.bean;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+/**
+ * 字幕文件，具体文件
+ */
 public class SubFile implements Parcelable {
 
     private String name;
@@ -24,6 +27,7 @@ public class SubFile implements Parcelable {
         net_name = in.readString();
         downloadLink = in.readString();
     }
+
 
     public static final Creator<SubFile> CREATOR = new Creator<SubFile>() {
         @Override
@@ -108,6 +112,7 @@ public class SubFile implements Parcelable {
         this.id = id;
     }
 
+
     @Override
     public int describeContents() {
         return 0;
@@ -119,5 +124,9 @@ public class SubFile implements Parcelable {
         dest.writeString(size);
         dest.writeInt(download);
         dest.writeInt(id);
+        dest.writeString(net_id);
+        dest.writeString(net_part);
+        dest.writeString(net_name);
+        dest.writeString(downloadLink);
     }
 }

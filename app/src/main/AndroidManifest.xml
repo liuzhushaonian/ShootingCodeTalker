@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.app.legend.shootingcodetalker">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -13,7 +14,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/shooting"
         android:supportsRtl="true"
-        android:theme="@style/ShootingTheme">
+        android:theme="@style/ShootingTheme"
+        tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".activity.MainActivity"
             android:windowSoftInputMode="adjustPan">
@@ -27,7 +29,8 @@
             android:name=".activity.SearchResultActivity"
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity android:name=".activity.SubInfoActivity" />
-        <activity android:name=".activity.EditActivity" />
+        <activity android:name=".activity.EditActivity"
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name=".activity.ColorActivity" />
         <activity
             android:name=".activity.PreferencesActivity"

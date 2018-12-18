@@ -10,10 +10,12 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.app.legend.shootingcodetalker.R;
 import com.app.legend.shootingcodetalker.adapter.FileAdapter;
@@ -28,6 +30,8 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
@@ -39,6 +43,9 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
+/**
+ * 搜索结果的详细界面，用于显示字幕具体文件，比如电视剧或是番剧拥有多集的情况，可以显示所有集数的字幕
+ */
 public class SubInfoActivity extends BaseActivity<ISubActivity,SubPresenter> implements ISubActivity{
 
 
@@ -175,6 +182,13 @@ public class SubInfoActivity extends BaseActivity<ISubActivity,SubPresenter> imp
          */
         adapter.setOnFileClickListener((subFile, view) -> {
 
+            if (subFile==null||subFile.getDownloadLink()==null){
+                Toast.makeText(this, "信息获取失败", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            openEditActivity(subFile);
+
         });
     }
 
@@ -242,6 +256,14 @@ public class SubInfoActivity extends BaseActivity<ISubActivity,SubPresenter> imp
         recyclerView.setLayoutAnimation(controller);
         recyclerView.getAdapter().notifyDataSetChanged();
         recyclerView.scheduleLayoutAnimation();
+    }
+
+    private void openEditActivity(SubFile subFile){
+        Intent intent=new Intent(this,EditActivity.class);
+        intent.putExtra(EditActivity.SUB,subFile);
+
+        startActivity(intent);
+
     }
 
 }

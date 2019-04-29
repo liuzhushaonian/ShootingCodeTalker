@@ -41,12 +41,15 @@
                 />
 
             <android.support.design.widget.FloatingActionButton
-                android:layout_width="@dimen/default_press"
-                android:layout_height="@dimen/default_press"
-                android:layout_marginEnd="@dimen/default_margin"
-                android:src="@drawable/download"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
                 android:scaleType="center"
                 android:id="@+id/item_download"
+                android:src="@drawable/download"
+                android:layout_marginEnd="16dp"
+                app:elevation="5dp"
+                android:tint="@color/colorWhite"
+
                 />
 
 

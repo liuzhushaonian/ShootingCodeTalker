@@ -178,34 +178,4 @@ public class MainPresenter extends BasePresenter<IMainActivity>{
         return bitmap;
     }
 
-    public void showHongbao(Activity activity){
-
-        String content=activity.getResources().getString(R.string.hongbao_content);
-
-        AlertDialog.Builder builder=new AlertDialog.Builder(activity);
-
-        View view= LayoutInflater.from(activity).inflate(R.layout.about_content,null,false);
-
-        TextView textView=view.findViewById(R.id.about_content);
-
-
-        textView.setText(content);
-
-        builder.setView(view).setTitle("伪打赏").setPositiveButton("复制吱口令", (DialogInterface dialog, int which) -> {
-
-
-            ClipboardManager mClipboardManager = (ClipboardManager) activity.getSystemService(CLIPBOARD_SERVICE);
-
-            ClipData clipData = ClipData.newPlainText("4909143", "4909143");
-            if (mClipboardManager!=null) {
-                mClipboardManager.setPrimaryClip(clipData);
-
-                Toast.makeText(activity, "复制成功，打开支付宝领取红包吧，感谢老铁的支持~", Toast.LENGTH_SHORT).show();
-
-            }
-
-        }).show();
-
-    }
-
 }

@@ -18,6 +18,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -51,7 +52,6 @@ public class MainActivity extends BaseActivity<IMainActivity, MainPresenter> imp
     private ImageView searchIcon;
     private long mExitTime = 0;
     private ImageView header;
-    private TextView hongbao;
 
     private static final String[] permissionStrings =
             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
@@ -103,8 +103,6 @@ public class MainActivity extends BaseActivity<IMainActivity, MainPresenter> imp
         navigationView = findViewById(R.id.left_menu);
         searchIcon = findViewById(R.id.search_icon);
         this.header = navigationView.getHeaderView(0).findViewById(R.id.header_image);
-
-        hongbao=findViewById(R.id.hongbao);
     }
 
     /**
@@ -301,12 +299,6 @@ public class MainActivity extends BaseActivity<IMainActivity, MainPresenter> imp
             return true;
         });
 
-        hongbao.setOnClickListener(v->{
-
-            presenter.showHongbao(this);
-
-        });
-
     }
 
     /**
@@ -393,7 +385,7 @@ public class MainActivity extends BaseActivity<IMainActivity, MainPresenter> imp
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
 
-                    if (!this.keyword.isEmpty()) {
+                    if (!TextUtils.isEmpty(this.keyword)) {
 
 
                         new Thread() {

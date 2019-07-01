@@ -9,8 +9,8 @@
 /captures
 .externalNativeBuild
 
-./idea
+/.idea
 
-.app/release
+/app/release
 
 
